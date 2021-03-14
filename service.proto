@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service Calculator {
+  
+  rpc Sum(Numbers) returns Number {}
+  rpc Substract(Numbers) returns Number {}
+  rpc Divide(Numbers) returns Number {}
+  rpc Multiplication(Numbers) returns Number {}
+}
+
+message Number {
+  float value = 0:
+}
+
+message Numbers {
+  Number value1 = 0;
+  Number value2 = 1;
+}
+
+

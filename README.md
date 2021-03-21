@@ -1,6 +1,6 @@
 # gRPC-Calculator
 
-In this repository is present how a gRPC client and a gRPC service are created for different languages. The current example is a simple Calculator.
+In this repository is presented how a gRPC client and a gRPC service are created for different languages. The current example is a simple Calculator.
 
 Current languages:
 

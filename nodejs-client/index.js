@@ -1,7 +1,7 @@
-var PROTO_PATH = __dirname + '/../service.proto'
-var grpc = require("@grpc/grpc-js")
-var protoLoader = require('@grpc/proto-loader')
-var packageDefinition = protoLoader.loadSync(
+const PROTO_PATH = __dirname + '/../service.proto'
+const grpc = require("@grpc/grpc-js")
+const protoLoader = require('@grpc/proto-loader')
+const packageDefinition = protoLoader.loadSync(
     PROTO_PATH,
     {keepCase: true,
      longs: String,
@@ -9,14 +9,14 @@ var packageDefinition = protoLoader.loadSync(
      defaults: true,
      oneofs: true
     })
-var protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
-var client = new protoDescriptor.Calculator('localhost:8000', grpc.credentials.createInsecure())
+const protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
+const client = new protoDescriptor.Calculator('localhost:8000', grpc.credentials.createInsecure())
 
 
 if (require.main === module) {
-  var v1 = parseFloat(process.argv[2])
-  var v2 = parseFloat(process.argv[3])
-  var operator = process.argv[4]
+  const v1 = parseFloat(process.argv[2])
+  const v2 = parseFloat(process.argv[3])
+  const operator = process.argv[4]
   
 
   if (typeof(v1) === "number" && typeof(v2) === "number" && ["+","-","/","x"].includes(operator)){

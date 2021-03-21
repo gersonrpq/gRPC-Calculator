@@ -1,2 +1,4 @@
 go-server/go-server
 go-client/go-client
+node_modules/
+__pycache__/

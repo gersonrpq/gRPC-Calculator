@@ -1,7 +1,7 @@
-var PROTO_PATH = __dirname + '/../service.proto'
-var grpc = require("@grpc/grpc-js")
-var protoLoader = require('@grpc/proto-loader')
-var packageDefinition = protoLoader.loadSync(
+const PROTO_PATH = __dirname + '/../service.proto'
+const grpc = require("@grpc/grpc-js")
+const protoLoader = require('@grpc/proto-loader')
+const packageDefinition = protoLoader.loadSync(
     PROTO_PATH,
     {keepCase: true,
      longs: String,
@@ -9,8 +9,8 @@ var packageDefinition = protoLoader.loadSync(
      defaults: true,
      oneofs: true
     })
-var protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
-var calculator = protoDescriptor.Calculator
+const protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
+const calculator = protoDescriptor.Calculator
 
 function sum(call, callback) {
   console.log("Someone has made a sum")

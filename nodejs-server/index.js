@@ -26,13 +26,13 @@ function substract(call, callback) {
 
 function multiplication(call, callback) {
   console.log("Someone has made a multiplication")
-  var result =  call.request.value1.value + call.request.value2.value
+  var result =  call.request.value1.value * call.request.value2.value
   callback(null, {value: result})
 }
 
 function divide(call, callback) {
   console.log("Someone has made a division")
-  var result =  call.request.value1.value + call.request.value2.value
+  var result =  call.request.value1.value / call.request.value2.value
   callback(null, {value: result})
 }
 
